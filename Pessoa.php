@@ -1,6 +1,6 @@
 <?php
 
- class Pessoa {
+ abstract class Pessoa {
     //put your code here
     protected $nome;
     protected $idade;

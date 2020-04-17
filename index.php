@@ -22,7 +22,7 @@ and open the template in the editor.
         $v[1] = new Video("Aula 12 de PHP");
         $v[2] = new Video("Aula 15 de PHP");
         
-        $p = new Pessoa("Jose", 22, "M");
+        $p = new User();
         print_r($v);
         print_r($p);
         
