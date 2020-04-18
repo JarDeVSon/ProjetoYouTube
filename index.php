@@ -22,9 +22,17 @@ and open the template in the editor.
         $v[1] = new Video("Aula 12 de PHP");
         $v[2] = new Video("Aula 15 de PHP");
         
-        $p = new User();
-        print_r($v);
-        print_r($p);
+        $p[0] = new Gafanhoto("Jose", 22, "M", "Jose");
+        $p [1]= new Gafanhoto("Maria", 19, "F", "Maria");
+        
+        $vis[0] = new Visualizacao($p[0], $v[2]);
+         $vis[1] = new Visualizacao($p[0], $v[1]);
+         
+         $vis[1]->avaliar();
+         $vis[1]->avaliarPorc(85);
+        print_r($vis[1]);
+        /*print_r($v);
+        print_r($p);*/
         
         ?>
         </pre>

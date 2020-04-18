@@ -7,6 +7,7 @@ class Video implements AcoesVideo {
     private $views;
     private $curtidas;
     private $reproduzindo;
+
     
     public function __construct($titulo) {
         $this->titulo = $titulo;
@@ -14,6 +15,8 @@ class Video implements AcoesVideo {
         $this->views = 0;
         $this->curtidas = 0;
         $this->reproduzindo = false;
+  
+        
     }
 
     public function getTitulo() {
@@ -36,23 +39,24 @@ class Video implements AcoesVideo {
         return $this->reproduzindo;
     }
 
-    public function setTitulo($titulo): void {
+    public function setTitulo($titulo){
         $this->titulo = $titulo;
     }
 
-    public function setAvaliacao($avaliacao): void {
-        $this->avaliacao = $avaliacao;
+    public function setAvaliacao($avaliacao){
+        $media = ($this->avaliacao/$this->views);
+        $this->avaliacao = $media;
     }
 
-    public function setViews($views): void {
+    public function setViews($views){
         $this->views = $views;
     }
 
-    public function setCurtidas($curtidas): void {
+    public function setCurtidas($curtidas){
         $this->curtidas = $curtidas;
     }
 
-    public function setReproduzindo($reproduzindo): void {
+    public function setReproduzindo($reproduzindo){
         $this->reproduzindo = $reproduzindo;
     }
 
